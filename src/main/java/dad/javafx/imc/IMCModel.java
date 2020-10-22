@@ -18,14 +18,13 @@ public class IMCModel {
 	
 	public IMCModel() {
 		
+		
 		imc.bind(peso.divide(Bindings
 				.createDoubleBinding(()->Math.pow(altura.doubleValue()/100,2),altura)));
 //				Math.pow(altura.doubleValue(),2)));
-		
+	
+
 	}
-
-
-
 	public final DoubleProperty pesoProperty() {
 		return this.peso;
 	}
