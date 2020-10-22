@@ -39,7 +39,7 @@ public class IMCApp extends Application {
 		imcLabel.textProperty()
 				.bind(Bindings
 						.when(model.alturaProperty().lessThanOrEqualTo(0).or(model.pesoProperty().lessThanOrEqualTo(0)))
-						.then("IMC: (peso*altura^2)")
+						.then("IMC: (peso / altura^2)")
 						.otherwise(Bindings.concat("IMC: ").concat(model.imcProperty().asString("%.2f")))
 
 				);
